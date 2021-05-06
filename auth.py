@@ -21,15 +21,15 @@ def login_post():
 
     employee = Employee.query.filter_by(username=email).first()
 
-    # check if user actually exists
+    # check if user exists
     # take the user supplied password, hash it, and compare it to the hashed password in database
     print(f'employee.passwd {employee.passwd}')
     print(f'password {password}')
     if not employee or not check_password_hash(employee.passwd, password):
         flash('Please check your login details and try again.')
-        return redirect(url_for('auth.login'))  # if user doesn't exist or password is wrong, reload the page
+        return redirect(url_for('auth.login'))  # user does not exist then redirect to the login page
 
-    # if the above check passes, then we know the user has the right credentials
+    # if this is true then the user exists
     login_user(employee, remember=remember)
     return redirect(url_for('main.index'))
 
