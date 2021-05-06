@@ -1,0 +1,4 @@
+host: "localhost"
+user: "flask"
+pass: "flask"
+db: "resort_management"
