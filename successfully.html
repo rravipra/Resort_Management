@@ -1,0 +1,9 @@
+{% extends "base.html" %} {% block head %} {{ super() }}
+<link
+  rel="stylesheet"
+  href="{{ url_for('static', filename= 'extended_beauty.css') }}"
+/>
+
+{% endblock %} {% block content %} Inserted into the table {{ status.id }} {{
+status.firstname }} Click here to check room list
+<a href="/roomdata">View Available rooms List </a> {% endblock %}

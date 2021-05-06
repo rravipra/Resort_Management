@@ -1,0 +1,18 @@
+{% extends "base.html" %} {% block head %} {{ super() }} {% endblock %} {% block
+content %}
+<h1>Available Rooms</h1>
+<table class="table table hover table-dark">
+  <thead>
+    <tr>
+      <th scope="col">Room_No</th>
+    </tr>
+  </thead>
+  <tbody>
+    {%for room_n in room_av %}
+    <tr>
+      <td>{{room_n}}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

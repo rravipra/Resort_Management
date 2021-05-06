@@ -1,0 +1,32 @@
+{% extends "base.html" %} {% block head %} {{ super() }} {% endblock %} {% block
+content %}
+<h1>Current Guests</h1>
+<table class="table table hover table-dark">
+  <thead>
+    <tr>
+      <th scope="col">Guest_ID</th>
+      <th scope="col">First_name</th>
+      <th scope="col">Last_name</th>
+      <th scope="col">Age</th>
+      <th scope="col">Gender</th>
+      <th scope="col">Room_No</th>
+      <th scope="col">Check_In_Time</th>
+      <th scope="col">Total_Cost</th>
+    </tr>
+  </thead>
+  <tbody>
+    {%for user in users %}
+    <tr>
+      <td>{{user.guest_id}}</td>
+      <td>{{user.name}}</td>
+      <td>{{user.lastname}}</td>
+      <td>{{user.age}}</td>
+      <td>{{user.gender}}</td>
+      <td>{{user.room_no}}</td>
+      <td>{{user.check_in_time}}</td>
+      <td>{{user.total_cost}}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

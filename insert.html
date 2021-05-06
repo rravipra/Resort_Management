@@ -1,0 +1,40 @@
+{% extends "base.html" %} {% block head %} {{ super() }}
+<link
+  rel="stylesheet"
+  href="{{ url_for('static', filename= 'extended_beauty.css') }}"
+/>
+
+{% endblock %} {% block content %}
+<form action="/data" method="POST">
+  First Name: <input type="text" name="first_name" />
+  <br />
+  <br />
+  Last Name: <input type="text" name="last_name" />
+  <br />
+  <br />
+  Age: <input type="number" name="age" />
+  <br />
+  <br />
+
+  Gender:
+  <input type="radio" id="gender_m" name="gender" value="M" />
+  <label for="gender_m">Male</label>
+  <input type="radio" id="gender_f" name="gender" value="F" />
+  <label for="gender_f">Female</label>
+  <br />
+  <br />
+  <label for="check_in_time">Check in date and time:</label>
+  <input type="datetime-local" id="check_in_time" name="check_in_time" />
+  <br />
+  <br />
+
+  Room Cost: <input type="number" name="total_cost" />
+  <br />
+  <br />
+  Room No: <input type="number" name="room_no" />
+  <br />
+  <br />
+
+  <input type="submit" value="Submit" />
+</form>
+{% endblock %}

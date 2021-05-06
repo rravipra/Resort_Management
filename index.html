@@ -1,0 +1,50 @@
+{% extends "base.html" %} {% block head %} {{ super() }}
+<link
+  rel="stylesheet"
+  href="{{ url_for('static', filename= 'extended_beauty.css') }}"
+/>
+<style>
+  ul,
+  ol {
+    list-style: none;
+  }
+</style>
+{% endblock %} {% block content %}
+<div id="intro">
+  {% with messages = get_flashed_messages() %} {% if messages %}
+  <div class="notification is-success">{{ messages[0] }}</div>
+  {% endif %} {% endwith %}
+  <style>
+    h1 {
+      text-align: center;
+    }
+  </style>
+  <style>
+    a {
+      text-align: center;
+    }
+  </style>
+  <style>
+    li {
+      text-align: center;
+    }
+  </style>
+  <h1
+    style="
+      font-family: 'Times New Roman', Times, serif, garamond, serif;
+      font-size: 35px;
+      font-style: italic;
+    "
+  >
+    Resort Management System
+  </h1>
+  <ol>
+    <li>
+      <a href="/data">View Current Guest List </a>
+    </li>
+    <li>
+      <a href="/insert">Insert a New Guest </a>
+    </li>
+  </ol>
+</div>
+{% endblock %}
