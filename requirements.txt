@@ -1,0 +1,15 @@
+cryptography==3.0
+Flask
+Flask-Cors
+flask_login==0.5.0
+flask_sqlalchemy==2.4.4
+flask-bcrypt
+inotify==0.2.10
+ipaddr==2.2.0
+importlib_metadata==1.7.0
+keyring==21.3.0
+lockfile==0.12.2
+lxml==4.5.2
+mock==4.0.2
+PyYAML
+SQLAlchemy<1.4
